@@ -1,5 +1,5 @@
 {
-  "name": "streamexpotemplate",
+  "name": "@hookedapp/streamexpotemplate",
   "description": "Expo template",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
@@ -55,8 +55,8 @@
   "homepage": "https://github.com/hookedapp/StreamExpoTemplate",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hookedapp/StreamExpoTemplate.git"
+    "url": "github:hookedapp/StreamExpoTemplate"
   },
-  "author": "Nikolas Andryuschenko",
-  "license": "MIT"
+  "author": "Hooked",
+  "license": "UNLICENSED"
 }
