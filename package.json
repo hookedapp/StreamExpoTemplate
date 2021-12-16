@@ -1,5 +1,6 @@
 {
   "name": "streamexpotemplate",
+  "description": "Expo template",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
@@ -40,5 +41,22 @@
     "jest-expo": "~43.0.0",
     "typescript": "~4.3.5"
   },
-  "private": true
+  "keywords": [
+    "expo",
+    "template",
+    "expo-template",
+    "react-native-school",
+    "react-native",
+    "react-native-template",
+    "jest",
+    "eslint",
+    "prettier"
+  ],
+  "homepage": "https://github.com/hookedapp/StreamExpoTemplate",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hookedapp/StreamExpoTemplate.git"
+  },
+  "author": "Nikolas Andryuschenko",
+  "license": "MIT"
 }
