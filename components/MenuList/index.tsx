@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FlatList, ScrollView, View, Text } from "react-native";
-import Constants from "expo-constants";
 import axios from "axios";
+import {APP_TITLE, LOCATION_ID, API_URL} from '@env'
 import MenuItem from "./MenuItem";
 
 const MenuList = () => {
@@ -12,16 +12,23 @@ const MenuList = () => {
 
   useEffect(() => {
     const getData = async () => {
+      try {
+        console.log("YO")
       const { data } = await axios.get(
-        `${Constants.manifest.extra.apiUrl}/catalog?location_id=${Constants.manifest.extra.locationId}`,
+        `${API_URL}/catalog?location_id=${LOCATION_ID}`,
         {
           headers: {
-            access_token: Constants.manifest.extra.accessToken,
+            access_token: '105bedac-08e0-4cd9-a4d3-a3bd8182c2d9'
           },
         }
       );
 
       setMenuConstruct(data.catalog);
+      } catch (err) {
+        console.log({
+          err
+        })
+      }
     };
 
     getData();
@@ -47,7 +54,7 @@ const MenuList = () => {
       renderItem={renderItem}
       ListHeaderComponent={
         <View style={{ height: 100, alignItems: 'center', justifyContent: 'center', width: "100%" }}>
-          <Text style={{fontSize: 25, fontWeight: '700'}}>{`Welcome to ${Constants.manifest.extra.appName}`} </Text>
+          <Text style={{fontSize: 25, fontWeight: '700'}}>{`Welcome to ${APP_TITLE}`} </Text>
         </View>
       }
       data={menuConstruct.category}
