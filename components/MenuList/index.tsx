@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { FlatList, ScrollView, View, Text } from "react-native";
 import axios from "axios";
-import {APP_TITLE, LOCATION_ID, API_URL} from '@env'
+import {APP_TITLE, LOCATION_ID, API_URL, ACCESS_TOKEN, LIGHT_MODE } from '@env'
 import MenuItem from "./MenuItem";
+
+
 
 const MenuList = () => {
   const [menuConstruct, setMenuConstruct] = useState({
@@ -13,12 +15,11 @@ const MenuList = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        console.log("YO")
       const { data } = await axios.get(
         `${API_URL}/catalog?location_id=${LOCATION_ID}`,
         {
           headers: {
-            access_token: '105bedac-08e0-4cd9-a4d3-a3bd8182c2d9'
+            access_token: ACCESS_TOKEN
           },
         }
       );
@@ -50,11 +51,11 @@ const MenuList = () => {
   };
   return (
     <FlatList
-      style={{ flex: 1, width: "100%", zIndex: 2 }}
+      style={{ flex: 1, width: "100%", zIndex: 2, backgroundColor: LIGHT_MODE === 'true' ? 'white': 'rgb(32, 33, 36)' }}
       renderItem={renderItem}
       ListHeaderComponent={
         <View style={{ height: 100, alignItems: 'center', justifyContent: 'center', width: "100%" }}>
-          <Text style={{fontSize: 25, fontWeight: '700'}}>{`Welcome to ${APP_TITLE}`} </Text>
+          <Text style={{fontSize: 25, fontWeight: '700', color: LIGHT_MODE === 'true' ? 'black': 'white'}}>{`Welcome to ${APP_TITLE}`} </Text>
         </View>
       }
       data={menuConstruct.category}
