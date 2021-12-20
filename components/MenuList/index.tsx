@@ -6,7 +6,7 @@ import {
   LOCATION_ID,
   API_URL,
   ACCESS_TOKEN,
-  LIGHT_MODE,
+    LIGHTMODE,
 } from "@env";
 import MenuItem from "./MenuItem";
 
@@ -59,7 +59,7 @@ const MenuList = () => {
         flex: 1,
         width: "100%",
         zIndex: 2,
-        backgroundColor: LIGHT_MODE ? "white" : "rgba(32, 33, 36, 1)",
+        backgroundColor: LIGHTMODE ? "white" : "rgba(32, 33, 36, 1)",
       }}
       renderItem={renderItem}
       ListHeaderComponent={
@@ -75,7 +75,7 @@ const MenuList = () => {
             style={{
               fontSize: 25,
               fontWeight: "700",
-              color: LIGHT_MODE ? "black" : "white",
+              color: LIGHTMODE ? "black" : "white",
             }}
           >
             {`Welcome to ${APP_TITLE}`}{" "}

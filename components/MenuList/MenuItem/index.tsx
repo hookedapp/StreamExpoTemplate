@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
-import { LIGHT_MODE } from "@env";
+import { LIGHTMODE } from "@env";
 
 const MenuItem = ({ menuItem }) => {
   return (
@@ -10,7 +10,7 @@ const MenuItem = ({ menuItem }) => {
         alignSelf: "center",
         height: 130,
         marginVertical: 20,
-        backgroundColor: LIGHT_MODE ? "white" : "rgba(32, 33, 36, 1)",
+        backgroundColor: LIGHTMODE ? "white" : "rgba(32, 33, 36, 1)",
         shadowOffset: {
           width: 0,
           height: 5,
@@ -18,7 +18,7 @@ const MenuItem = ({ menuItem }) => {
         shadowOpacity: 0.1,
         shadowRadius: 20,
         borderRadius: 10,
-        shadowColor: LIGHT_MODE ? "black" : "white",
+        shadowColor: LIGHTMODE ? "black" : "white",
       }}
     >
       <View style={{ position: "absolute", top: 15, right: 15 }}>
@@ -42,7 +42,7 @@ const MenuItem = ({ menuItem }) => {
             style={{
               fontSize: 14,
               fontWeight: "600",
-              color: LIGHT_MODE ? "black" : "white",
+              color: LIGHTMODE ? "black" : "white",
             }}
           >
             {menuItem.name}
@@ -51,7 +51,7 @@ const MenuItem = ({ menuItem }) => {
             style={{
               fontSize: 11,
               fontWeight: "500",
-              color: LIGHT_MODE ? "black" : "white",
+              color: LIGHTMODE ? "black" : "white",
             }}
             numberOfLines={3}
           >

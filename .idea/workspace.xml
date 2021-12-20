@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="159884be-7433-4841-bcaa-398e58f1d355" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/MenuList/MenuItem/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MenuList/MenuItem/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/MenuList/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MenuList/index.tsx" afterDir="false" />
     </list>
